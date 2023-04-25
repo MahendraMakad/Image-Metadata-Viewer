@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Metadata Viewer</title>
+  <!-- exif-js library cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
+  <!-- css bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Image Metadata Viewer</h1>
+  </header>
+  <section class="main">
+    <div class="main-container flex">
+      <div class="image-container container">
+        <label for="file-input" class="upload-icon">
+          <i class="fa-solid fa-file-arrow-up mx-2"></i>Upload Image
+        </label>
+        <input id="file-input" type="file" style="display: none;" onchange="previewImage(event)">      
+        <img id="preview" src="">
+      </div>
+      <div class="filedata-container container" style="display: none;" >
+        <h1 class="container-heading">
+          <i class="fa-solid fa-file m-4"></i>Image metadata
+        </h1>
+        <table id="filedata" class="table"></table>
+      </div>
+      <div class="metadata-container container" style="display: none;">
+        <h1 class="container-heading">
+          <i class="fa-solid fa-database m-4"></i>Full Metadata
+        </h1>
+        <table id="metadata" class="table"></table>
+      </div>
+    </div>
+  </section>
+  <script src=" ./script.js">
+  </script>
+</body>
+
+</html>
